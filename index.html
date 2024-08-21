@@ -5,252 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bird Flu Watch</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css">
-</head>
+    <!-- Using Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-
-<svg width="0" height="0">
-    <defs>
-        <clipPath id="wave" clipPathUnits="objectBoundingBox">
-            <path d="M0,0 H1 V0.8 C0.5,1 0.5,0.8 0,1 Z" />
-        </clipPath>
-    </defs>
-</svg>
-    <header>
-        <div class="logo">
-            <img src="logo4.png" alt="Bird Flu Watch Logo">
-        </div>
-        <nav>
-            <ul>
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="hero-overlay"></div>
+        <nav class="navbar">
+            <img src="logo4.png" alt="Logo" class="logo">
+            <ul class="nav-links">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">What we do</a></li>
                 <li><a href="#">Team</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Projects</a></li>
                 <li><a href="#">Partners</a></li>
                 <li><a href="#">Blog</a></li>
             </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
         </nav>
+        <div class="hero-content">
+            <div class="welcome-text">
+                <h1>Welcome to Bird Flu Watch!</h1>
+                <p>Your trusted source for the latest updates, expert advice, and essential tools to protect your farm. Stay informed and vigilant with real-time alerts and practical guidance on avian influenza.</p>
+                <a href="#" class="btn">View Projects</a>
+            </div>
+            <div class="survey-form">
+                <h2>Survey Form</h2>
+                <p class="form-info">Please click the button below to fill out the form with the required information</p>
+                <a href="https://forms.gle/oX1pfxsZCEPkcE4c6" target="_blank" class="btn">Go to Survey</a>
+            </div>
+            
+        </div>
     </header>
-    <main>
-        <div class="image-container">
-            <img src="avian.jpeg" alt="Farmer with chickens">
-        </div>
-        <div class="welcome-message">
-            <h1>Welcome to Bird Flu Watch!</h1>
-            <p>Your go-to website for the latest updates, expert advice and essential tools to protect your farm!</p>
-            <p>Stay informed, stay vigilant, and keep your farm safe from avian influenza with real-time alerts and practical guidance tailored just for you.</p>
-        </div>
-        <!-- Second section start -->
-        <section class="goals-section">
-            <h2>YOUR BIRD FLU WATCH HUB</h2>
-            <div class="goals-content">
-                <div class="image-wrapper">
-                    <img src="eggs.jpeg" alt="Basket of eggs">
-                </div>
-                <div class="goals-text">
-                    <h3>Our goals</h3>
-                    <ul>
-                        <li>Improving food security</li>
-                        <li>Improve productivity of small farms</li>
-                        <li>Support the agricultural community with expert advice and updates</li>
-                    </ul>
-                    <p>Providing healthier chickens for a healthier world!</p>
-                </div>
-            </div>
-            <p class="mission-statement">We are a team of professionals committed to making food production more efficient and sustainable. Our eclectic background allows us to develop tailor-made solutions along the food chain. We work with the public sector, private enterprises and research institutions developing projects, products, businesses and markets.</p>
-        </section>
-        <!-- Second section end -->
-        <!-- Third section start -->
-        <section class="bird-flu-info">
-            <h2>Bird Flu</h2>
-            <p>Easy steps that can help you protect your flock!</p>
-            <div class="info-cards">
-                <div class="info-card">
-                    <h3>Housing</h3>
-                    <ul>
-                        <li>Should be in line with government guidance</li>
-                        <li>Make sure no wild birds, mice or rats cannot access the area the birds live</li>
-                        <li>Ensure no leaks in the roofs where the birds live</li>
-                    </ul>
-                </div>
-                <div class="info-card">
-                    <h3>Cleaning top tips!</h3>
-                    <ul>
-                        <li>Regularly clean the areas where the birds have access</li>
-                        <li>Disinfect equipment such as feeders and drinkers regularly</li>
-                    </ul>
-                </div>
-                <div class="info-card">
-                    <h3>Food and water</h3>
-                    <ul>
-                        <li>Clean up spillages of feed</li>
-                        <li>Feed wild garden birds separate from your captive birds</li>
-                        <li>Don't let your birds share any nearby ponds</li>
-                    </ul>
-                </div>
-                <div class="info-card">
-                    <h3>Clothing and footwear</h3>
-                    <ul>
-                        <li>Wash the footwear and clothes worn before you come into contact with your birds</li>
-                        <li>Decrease cross contamination - wear separate shoes doing other activities</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="additional-info">
-                <div class="additional-info-item">
-                    <h4>Infected birds have influenza viruses in their</h4>
-                    <ul>
-                        <li>Saliva</li>
-                        <li>Mucous</li>
-                        <li>Droppings</li>
-                    </ul>
-                </div>
-                <div class="additional-info-item">
-                    <h4>Avoid contact with domestic and wild birds</h4>
-                </div>
-                <div class="additional-info-item">
-                    <h4>Report sick or unexpectedly dead birds to authorities</h4>
-                </div>
-                <div class="additional-info-item">
-                    <h4>Self isolate if you have symptoms of influenza and seek medical advice</h4>
-                </div>
-            </div>
-            <p>Why not use our newly built app to help protect your birds?</p>
-        </section>
-        <!-- Third section end -->
-        <!-- Fourth section start -->
-        <section class="team-section">
-            <h2>The Team</h2>
-            <div class="team-members">
-                <div class="team-member">
-                    <img src="1.png" alt="Maria de la Puerta">
-                    <h3>Maria de la Puerta</h3>
-                    <p>Animal Nutrition & Livestock production</p>
-                </div>
-                <div class="team-member">
-                    <img src="2.png" alt="Samson Balogun">
-                    <h3>Samson Balogun</h3>
-                    <p>Parasitologist</p>
-                </div>
-                <div class="team-member">
-                    <img src="3.png" alt="Ahmad Hassan">
-                    <h3>Ahmad Hassan</h3>
-                    <p>Veterinarian</p>
-                </div>
-                <div class="team-member">
-                    <img src="4.png" alt="Kodi Monte">
-                    <h3>Kodi Monte</h3>
-                    <p>Genetics and Human health</p>
-                </div>
-                <!-- <div class="team-member">
-                    <img src="5.png" alt="Jessica Davis">
-                    <h3>Jessica Davis</h3>
-                    <p>Scientific communications Intern</p>
-                </div> -->
-                <div class="team-member">
-                    <img src="6.png" alt="Edore Akpokodje">
-                    <h3>Edore Akpokodje</h3>
-                    <p>Project Coordinator</p>
-                </div>
-                <div class="team-member">
-                    <img src="7.png" alt="Edore Akpokodje">
-                    <h3></h3>
-                    <p>Pro</p>
-                </div>
-            </div>
-        </section>
-        <!-- Fourth section end -->
-        <!-- Fifth section start -->
-        <section class="what-we-do-section">
-            <h2>What we do</h2>
-            <div class="activities">
-                <div class="activity">
-                    <h3>INFORMATION SHARING</h3>
-                    <img src="eggs.jpeg" alt="Information Sharing">
-                    <p>With our innovative app, Bird Flu Watch, critical information is just a tap away. Designed for farmers, the app delivers real-time updates, expert tips, and actionable advice, ensuring that you have the tools you need to protect your animals and enhance your farm’s productivity.</p>
-                </div>
-                <div class="activity">
-                    <h3>RESEARCH</h3>
-                    <img src="eggs.jpeg" alt="Research">
-                    <p>As a team, we conduct extensive research to stay at the forefront of avian influenza prevention. By sharing our findings and raising awareness, we empower farmers with the knowledge they need to safeguard their flocks and maintain healthy, productive farms.</p>
-                </div>
-                <div class="activity">
-                    <h3>TRAINING</h3>
-                    <img src="eggs.jpeg" alt="Training">
-                    <p>Training sessions are coming soon! We’re working hard to prepare comprehensive programs to help you tackle bird flu effectively. Stay tuned and check back soon for updates on our upcoming training opportunities.</p>
-                </div>
-            </div>
-            <p class="footer-note">Interested in partnering, knowing when our next training will happen or wondering what the outcome of our latest research is? Follow us on social media not to miss out or drop us and email.</p>
-            <div class="social-media-icons">
-                <a href="#" class="bi bi-facebook" aria-label="Facebook"></a>
-                <a href="#" class="bi bi-twitter" aria-label="Twitter"></a>
-                <a href="#" class="bi bi-linkedin" aria-label="LinkedIn"></a>
-                <a href="#" class="bi bi-instagram" aria-label="Instagram"></a>
-            </div>
-        </section>
-        <!-- Fifth section end -->
-         <!-- Footer -->
-         <footer>
-            <div class="footer-content">
-                <div class="footer-top">
-                    <div class="footer-logo">
-                        <img src="logo4.png" alt="Bird Flu Watch Logo">
-                    </div>
-                    <div class="footer-links">
-                        <ul class="footer-column">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">What We Do</a></li>
-                        </ul>
-                        <ul class="footer-column">
-                            <li><a href="#">Team</a></li>
-                            <li><a href="#">Partners</a></li>
-                            <li><a href="#">Blog</a></li>
-                        </ul>
-                        <ul class="footer-column">
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">FAQs</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="footer-middle">
-                    <p>Subscribe to our newsletter for the latest updates:</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Your email address" required>
-                        <button type="submit">Subscribe</button>
-                    </form>
-                </div>
-                <div class="footer-bottom">
-                    <div class="social-media-icons">
-                        <a href="#" class="bi bi-facebook" aria-label="Facebook"></a>
-                        <a href="#" class="bi bi-twitter" aria-label="Twitter"></a>
-                        <a href="#" class="bi bi-linkedin" aria-label="LinkedIn"></a>
-                        <a href="#" class="bi bi-instagram" aria-label="Instagram"></a>
-                    </div>
-                    <div class="footer-note">
-                        &copy; 2024 Bird Flu Watch. All rights reserved.
-                    </div>
-                </div>
-            </div>
-        </footer>
-        
-        <!-- SVG clip-path for a wavy footer effect -->
-        <svg width="0" height="0">
-            <defs>
-                <clipPath id="footer-wave" clipPathUnits="objectBoundingBox">
-                    <path d="M0,0.2 C0.2,0 0.4,0.4 0.5,0.4 C0.6,0.4 0.8,0 1,0.2 V1 H0 Z" />
-                </clipPath>
-            </defs>
-        </svg>
-        
 
-
-
-
-
-
-    </main>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            const hamburger = document.querySelector('.hamburger i');
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('fa-bars');
+            hamburger.classList.toggle('fa-times');
+        }
+    </script>
 </body>
 </html>
