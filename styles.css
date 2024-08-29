@@ -66,21 +66,21 @@ body {
 
 /* Hero Section */
 .hero-section {
-    background: url('chicks.jpeg') no-repeat center center/cover;
+    background: url('chicken.jpg') no-repeat center center/cover;
     color: #fff;
     padding: 6rem 2rem;
     position: relative;
     height: 100vh;
 }
 
-.hero-overlay {
+/* .hero-overlay {
     background: rgba(0, 0, 0, 0.5);
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-}
+} */
 
 .hero-content {
     max-width: 1200px;
@@ -129,66 +129,7 @@ body {
     background-color: #2E83B8;
 }
 
-/* Survey Form */
-.survey-form {
-    background: rgba(255, 255, 255, 0.95); /* Subtle background color */
-    padding: 2rem;
-    border-radius: 10px; /* Smooth corners */
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
-    width: 400px;
-    text-align: center;
-    position: relative;
-    z-index: 2;
-    transition: box-shadow 0.3s ease; /* Smooth transition for shadow */
-}
 
-.survey-form:hover {
-    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.3); /* Slightly stronger shadow on hover */
-}
-
-.survey-form h2 {
-    font-size: 1.8rem; /* Slightly larger heading */
-    color: #2E83B8; /* Consistent blue color */
-    margin-bottom: 1rem;
-    border-bottom: 2px solid #2E83B8;
-    padding-bottom: 0.5rem;
-    text-transform: uppercase; /* Uppercase heading */
-    letter-spacing: 1px;
-}
-
-.form-info {
-    font-size: 1.1rem;
-    color: #555; /* Slightly darker text */
-    margin-bottom: 1.5rem;
-    font-style: normal; /* Removed italic for clarity */
-}
-
-/* Updated text */
-.survey-form p {
-    font-size: 1rem;
-    color: #666;
-    margin-bottom: 2rem;
-}
-
-/* Button Styling */
-.survey-form a {
-    display: inline-block;
-    background-color: #2E83B8;
-    color: white;
-    padding: 0.9rem 2rem;
-    text-transform: uppercase;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    border-radius: 8px; /* Slightly rounded corners */
-    transition: background-color 0.3s ease, transform 0.2s;
-    text-decoration: none; /* No underline */
-    font-size: 1.1rem; /* Consistent font size */
-}
-
-.survey-form a:hover {
-    background-color: #1c5a83; /* Slightly darker blue on hover */
-}
 
 /* Media Queries */
 @media (max-width: 768px) {
@@ -220,6 +161,7 @@ body {
     transform: translateY(0); /* Smoothly slide down */
     transition: transform 0.4s ease-in-out; /* Smooth transition */
 }
+
 
 /* Navbar Links Styling */
 .nav-links a {
@@ -440,6 +382,13 @@ body {
     margin-top: 0.5rem;
 }
 
+.goal-box p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.5;
+    margin-top: 0.5rem;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .goals-container {
@@ -484,7 +433,7 @@ body {
 
 .about-text p:first-of-type {
     font-weight: bold; /* Bold the specific paragraph */
-    font-size: 1.2rem; /* Slightly larger font for emphasis */
+    font-size: 2.5rem; /* Slightly larger font for emphasis */
     margin-bottom: 1rem;
 }
 
@@ -513,6 +462,7 @@ body {
         flex-direction: column; /* Stack items vertically on mobile */
         text-align: center;
         gap: 1rem; /* Reduced gap for mobile */
+        margin-top: 150px;
     }
 
     .about-text {
@@ -584,86 +534,124 @@ body {
     text-align: center;
 }
 
-/* Survey Form Section */
+/* Survey Section */
 .survey-section {
     padding: 4rem 2rem;
     background-color: #fff;
     text-align: center;
+    width: 100%; /* Ensure the section spans the full width of the page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.survey-container {
+    display: flex;
+    justify-content: flex-start; /* Align form to the left */
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 3rem 2rem;
+    gap: 4rem; /* Increase gap between form and image */
 }
 
 .survey-form {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto; /* Center the form */
-    text-align: center;
-    position: relative;
+    flex: 1;
+    padding: 0 2rem;
+    border: none; /* Remove border for flat design */
+    box-shadow: none; /* Remove shadow for flat design */
+    text-align: left; /* Align text to the left */
 }
 
 .survey-form h2 {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     color: #333;
+    font-weight: bold;
     margin-bottom: 1rem;
-    border-bottom: 2px solid #2E83B8;
-    padding-bottom: 0.5rem;
+    text-transform: uppercase;
 }
 
-.survey-form .form-info {
+.survey-form p {
     font-size: 1rem;
-    color: #666;
-    margin-bottom: 1.5rem;
+    color: #555;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+   
+}
+
+.survey-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.survey-form label {
+    display: none;
 }
 
 .survey-form input {
-    width: 100%;
-    padding: 0.75rem;
-    margin-bottom: 1rem;
+    padding: 1rem;
+    font-size: 1rem;
     border: 1px solid #ddd;
     border-radius: 5px;
-    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #f6f6f6;
+}
+
+.survey-form input::placeholder {
+    color: #888;
 }
 
 .survey-form button {
-    padding: 0.75rem;
-    background-color: #2E83B8;
+    padding: 1rem;
+    font-size: 1rem;
     color: white;
+    background-color: #2E83B8;
     border: none;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 1.1rem;
     border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.2s;
-    width: 150px;
-    float: right;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+    margin-top: 1rem;
+    margin-bottom: 2rem; /* Add space below the button */
 }
 
 .survey-form button:hover {
     background-color: #0056b3;
-    transform: scale(1.02);
+}
+
+.survey-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.survey-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .goals-container {
+    .survey-container {
         flex-direction: column;
-        gap: 2rem;
-        align-items: center; /* Center-align on mobile */
-    }
-
-    .goal-box {
-        max-width: 100%; /* Make the boxes take full width on mobile */
-    }
-
-    .goal-box img {
-        max-width: 100%; /* Ensure images take full width on mobile */
+        padding: 1rem;
+        gap: 1rem; /* Reduce gap for smaller screens */
     }
 
     .survey-form {
-        width: 100%;
-        padding: 2rem;
+        padding: 1rem;
+        text-align: center; /* Center text on small screens */
+    }
+
+    .survey-image {
+        padding: 1rem;
     }
 }
 
@@ -866,15 +854,80 @@ body {
     color: #777;
 }
 
+/* Hidden class to hide additional team members */
+.hidden {
+    display: none;
+}
+
+/* Toggle Button */
+.toggle-btn {
+    margin-top: 2rem;
+    padding: 12px 24px;
+    font-size: 1rem;
+    color: #2E83B8;
+    background-color: white;
+    border: 1px solid #2E83B8;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+    width: 9%; /* Initial width for larger screens */
+    text-align: center;
+}
+
+.toggle-btn:hover {
+    background-color: #2E83B8;
+    transform: translateY(-2px);
+    color: white;
+}
+
+/* Responsive Design */
+/* Toggle Button */
+.toggle-btn {
+    margin-top: 2rem;
+    padding: 12px 24px;
+    font-size: 1rem;
+    color: #2E83B8;
+    background-color: white;
+    border: 1px solid #2E83B8;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+    width: 9%; /* Initial width for larger screens */
+    text-align: center;
+}
+
+.toggle-btn:hover {
+    background-color: #2E83B8;
+    transform: translateY(-2px);
+    color: white;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
-    .team-container {
-        flex-direction: column;
-        align-items: center;
+    .toggle-btn {
+        width: 50%; /* Adjust width to 50% on smaller screens */
+        padding: 12px; /* Adjust padding to make the button fit better */
+        font-size: 1rem; /* Keep the font size readable */
+        color: #2E83B8; /* Maintain text color */
+        background-color: white; /* Maintain background color */
+        border: 1px solid #2E83B8; /* Maintain border color */
+        border-radius: 5px; /* Slightly increase border radius */
+        box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3); /* Maintain box shadow */
     }
 
-    .team-member {
-        flex: 1 1 100%; /* Full width on mobile */
+    .toggle-btn:hover {
+        background-color: #2E83B8; /* Ensure hover effect works on mobile */
+        color: white;
+    }
+}
+
+@media (max-width: 480px) {
+    .toggle-btn {
+        width: 70%; /* Adjust width to 70% for very small screens */
+        padding: 10px; /* Adjust padding for smaller screens */
+        font-size: 0.9rem; /* Slightly reduce font size for small screens */
     }
 }
 
@@ -907,6 +960,7 @@ body {
     justify-content: center;
     gap: 2rem;
     width: 100%;
+    flex-wrap: wrap; /* Allow images to wrap to the next line on smaller screens */
 }
 
 .partners-row img {
@@ -914,8 +968,143 @@ body {
     max-width: 1000px;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .partners-row {
+        flex-direction: column; /* Stack images vertically on smaller screens */
+        align-items: center;
+        gap: 1.5rem; /* Reduce gap between images */
+    }
+
+    .partners-row img {
+        max-width: 80%; /* Reduce image width to fit better on smaller screens */
+        margin: 0 auto; /* Center images */
+    }
+}
+
+@media (max-width: 480px) {
+    .partners-row img {
+        max-width: 90%; /* Further reduce image width for very small screens */
+    }
+}
+
+/* Survey Section */
+.survey-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+   
+}
+
+.survey-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    width: 100%;
+    /* background-color: white; */
+    border-radius: 10px;
+    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); */
+    padding: 3rem 2rem; /* Increase padding for more spacing */
+}
+
+.survey-form {
+    flex: 1;
+    padding: 0 2rem;
+}
+
+.survey-form h2 {
+    font-size: 1.8rem;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-transform: uppercase; /* Make text uppercase as shown in the screenshot */
+}
+
+.survey-form p {
+    font-size: 1rem;
+    color: #555;
+    text-align: center;
+    margin-bottom: 2rem;
+    line-height: 1.5; /* Adjust line height */
+}
+
+.survey-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Add space between form elements */
+}
+
+.survey-form label {
+    display: none; /* Hide labels to match the screenshot */
+}
+
+.survey-form input {
+    padding: 1rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #f6f6f6; /* Light background color for input fields */
+}
+
+.survey-form input::placeholder {
+    color: #888; /* Placeholder text color */
+}
+
+.survey-form button {
+    padding: 1rem;
+    font-size: 1rem;
+    color: white;
+    background-color: #2E83B8;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase; /* Uppercase button text */
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2); /* Add shadow for depth */
+    width: 100%;
+}
+
+.survey-form button:hover {
+    background-color: #0056b3;
+}
+
+.survey-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.survey-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .survey-container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .survey-form {
+        padding: 1rem;
+    }
+
+    .survey-image {
+        padding: 1rem;
+    }
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -1050,7 +1239,7 @@ body {
 }
 /* Footer Section */
 .footer-section {
-    background-color: #2E83B8;
+    background-color:  #111111;
     color: white;
     padding: 2rem 1rem;
     text-align: center;
@@ -1119,4 +1308,114 @@ body {
     }
 }
 
+/* Hero Survey Form Section */
+.hero-content .hero-survey-form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 350px;
+    margin-top: 3.5rem; /* Push the form down slightly */
+    text-align: left; /* Align text to the left */
+    height: auto;
+    margin-right: -70px;
+}
 
+.hero-content .hero-survey-form h2 {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.hero-content .hero-survey-form p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.hero-content .hero-survey-form input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+}
+
+.hero-content .hero-survey-form input::placeholder {
+    color: #aaa; /* Light grey placeholder text */
+}
+
+.hero-content .hero-survey-form button {
+    width: 100%; /* Make the button full width */
+    padding: 1rem;
+    background-color: #2E83B8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2); /* Add slight shadow for depth */
+}
+
+.hero-content .hero-survey-form button:hover {
+    background-color: #0056b3;
+}
+
+.hero-content .hero-survey-form .form-info {
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 1rem;
+    text-align: left; /* Left align text */
+}
+
+/* Hero Survey Form Section */
+.hero-content .hero-survey-form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 350px;
+    margin-top: 3.5rem; /* Push the form down slightly */
+    text-align: left; /* Align text to the left */
+    height: auto;
+    margin-right: -70px; /* Adjust margin-right for desktop */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content .hero-survey-form {
+        max-width: 90%; /* Allow some padding on the sides */
+        margin-right: 0; /* Reset margin-right on smaller screens */
+        margin-left: auto; /* Center the form */
+        margin-right: auto; /* Center the form */
+        padding: 1.5rem; /* Adjust padding for smaller screens */
+        margin-top: 2rem; /* Reduce the top margin */
+        box-sizing: border-box; /* Ensure padding doesn't overflow the width */
+    }
+}
+
+/* For even smaller screens (optional) */
+@media (max-width: 480px) {
+    .hero-content .hero-survey-form {
+        padding: 1rem; /* Further reduce padding for very small screens */
+        max-width: 100%; /* Ensure it uses full available width */
+    }
+}
+
+.welcome-text .underline {
+    width: 100px; /* Set the width of the blue underline */
+    height: 5px;  /* Set the thickness of the underline */
+    background-color: #2E83B8; /* Blue color */
+    margin-top: 0.5rem; /* Add some space between the h1 and the underline */
+    margin-bottom: 1rem; /* Add space between the underline and the paragraph */
+}
