@@ -234,7 +234,6 @@ body {
     }
 }
 
-
 /* About Section */
 .about-section {
     padding: 3rem 2rem; /* Reduced padding for better centering */
@@ -264,6 +263,14 @@ body {
     margin-bottom: 0.5rem; /* Reduced bottom margin */
     text-transform: uppercase; /* Convert text to uppercase */
 }
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .about-section {
+        padding-top: 5rem; /* Add more top padding to push the section down */
+    }
+}
+
 /* Services Section */
 .services-section {
     padding: 4rem 2rem;
@@ -882,30 +889,11 @@ body {
 }
 
 /* Responsive Design */
-/* Toggle Button */
-.toggle-btn {
-    margin-top: 2rem;
-    padding: 12px 24px;
-    font-size: 1rem;
-    color: #2E83B8;
-    background-color: white;
-    border: 1px solid #2E83B8;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
-    width: 9%; /* Initial width for larger screens */
-    text-align: center;
-}
-
-.toggle-btn:hover {
-    background-color: #2E83B8;
-    transform: translateY(-2px);
-    color: white;
-}
-
-/* Responsive Design */
 @media (max-width: 768px) {
+    .team-member {
+        flex: 1 1 calc(50% - 2rem); /* Two members per row on smaller screens */
+    }
+
     .toggle-btn {
         width: 50%; /* Adjust width to 50% on smaller screens */
         padding: 12px; /* Adjust padding to make the button fit better */
@@ -924,6 +912,10 @@ body {
 }
 
 @media (max-width: 480px) {
+    .team-member {
+        flex: 1 1 100%; /* One member per row on very small screens */
+    }
+
     .toggle-btn {
         width: 70%; /* Adjust width to 70% for very small screens */
         padding: 10px; /* Adjust padding for smaller screens */
@@ -960,14 +952,20 @@ body {
     justify-content: center;
     gap: 2rem;
     width: 100%;
-    flex-wrap: wrap; /* Allow images to wrap to the next line on smaller screens */
+    flex-wrap: wrap;
 }
 
 .partners-row img {
-    width: 100%;
-    max-width: 1000px;
+    width: 115%; /* Increase width beyond 100% */
+    max-width: 1150px; /* Increase the maximum width */
     height: auto;
     border-radius: 10px;
+    transform: scale(1.05); /* Zoom in the image slightly */
+    transition: transform 0.3s ease, width 0.3s ease; /* Smooth transition for zoom */
+}
+
+.partners-row img:hover {
+    transform: scale(1.1); /* Further zoom on hover */
 }
 
 /* Responsive Design */
@@ -996,25 +994,28 @@ body {
     justify-content: center;
     align-items: center;
     padding: 2rem;
-   
+    width: 100%; /* Ensure the section takes up the full width */
 }
 
 .survey-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 900px;
+    max-width: 1360px; /* Increase max-width for a wider layout */
     width: 100%;
-    /* background-color: white; */
     border-radius: 10px;
-    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); */
-    padding: 3rem 2rem; /* Increase padding for more spacing */
+    padding: 3rem 5rem; /* Increase padding for more spacing */
+    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+    gap: 4rem; /* Increase the gap between form and image */
+    /* border: 1px solid gray; */
 }
 
 .survey-form {
     flex: 1;
-    padding: 0 2rem;
+    padding: 0 4rem; /* Increase padding to create more space around the form */
+    border: 1px solid #dcdcdc; /* Use a lighter gray for the border */
 }
+
 
 .survey-form h2 {
     font-size: 1.8rem;
@@ -1022,7 +1023,7 @@ body {
     text-align: center;
     font-weight: bold;
     margin-bottom: 1rem;
-    text-transform: uppercase; /* Make text uppercase as shown in the screenshot */
+    text-transform: uppercase;
 }
 
 .survey-form p {
@@ -1030,17 +1031,18 @@ body {
     color: #555;
     text-align: center;
     margin-bottom: 2rem;
-    line-height: 1.5; /* Adjust line height */
+    line-height: 1.5;
 }
 
 .survey-form form {
     display: flex;
     flex-direction: column;
-    gap: 1rem; /* Add space between form elements */
+    gap: 1rem;
+    
 }
 
 .survey-form label {
-    display: none; /* Hide labels to match the screenshot */
+    display: none;
 }
 
 .survey-form input {
@@ -1051,11 +1053,11 @@ body {
     border-radius: 5px;
     width: 100%;
     box-sizing: border-box;
-    background-color: #f6f6f6; /* Light background color for input fields */
+    background-color: #f6f6f6;
 }
 
 .survey-form input::placeholder {
-    color: #888; /* Placeholder text color */
+    color: #888;
 }
 
 .survey-form button {
@@ -1066,9 +1068,9 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    text-transform: uppercase; /* Uppercase button text */
+    text-transform: uppercase;
     transition: background-color 0.3s;
-    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2); /* Add shadow for depth */
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
     width: 100%;
 }
 
@@ -1089,18 +1091,108 @@ body {
     height: auto;
 }
 
+/* Survey Section */
+.survey-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    width: 100%; /* Ensure the section takes up the full width */
+}
+
+.survey-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1372px; /* Increase max-width for a wider layout */
+    width: 100%;
+    border-radius: 10px;
+    padding: 3rem 5rem; /* Increase padding for more spacing */
+    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+    gap: 4rem; /* Increase the gap between form and image */
+}
+
+.survey-form {
+    flex: 2; /* Increase the flex value to give the form more space */
+    padding: 0 4rem; /* Maintain padding to create space around the form */
+    border: 1px solid #dcdcdc; /* Use a lighter gray for the border */
+}
+
+.survey-image {
+    flex: 1; /* Reduce the flex value to give less space to the image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.survey-image img {
+    max-width: 100%;
+    height: auto;
+}
+
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .survey-container {
-        flex-direction: column;
-        padding: 1rem;
+        padding: 2rem 4rem; /* Adjust padding for medium screens */
+        gap: 3rem; /* Maintain a comfortable gap between form and image */
+        max-width: 1400px; /* Adjust max-width for medium screens */
     }
 
     .survey-form {
-        padding: 1rem;
+        flex: 2; /* Ensure the form takes up more space */
+        padding: 0 3rem; /* Adjust padding around the form for medium screens */
+        border: 1px solid #dcdcdc; /* Lighter gray border */
     }
 
     .survey-image {
+        flex: 1; /* Reduce the space for the image */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .survey-container {
+        flex-direction: column;
+        padding: 1rem 3rem; /* Adjust padding for smaller screens */
+        gap: 2rem; /* Adjust gap for smaller screens */
+        max-width: 100%; /* Ensure full width on smaller screens */
+    }
+
+    .survey-form {
+        flex: none; /* Remove flex behavior for column layout */
+        width: 100%; /* Ensure the form takes full width */
+        padding: 1.5rem; /* Provide adequate padding */
+        border: 1px solid #dcdcdc; /* Lighter gray border */
+    }
+
+    .survey-image {
+        flex: none; /* Remove flex behavior for column layout */
+        width: 100%; /* Ensure the image takes full width */
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .survey-container {
+        padding: 1rem 2rem; /* Further reduce padding for very small screens */
+        gap: 1.5rem; /* Reduce gap for very small screens */
+        max-width: 100%; /* Ensure full width on very small screens */
+    }
+
+    .survey-form {
+        flex: none; /* Remove flex behavior for column layout */
+        width: 100%; /* Ensure the form takes full width */
+        padding: 1rem; /* Adjust padding for very small screens */
+        border: 1px solid #dcdcdc; /* Lighter gray border */
+    }
+
+    .survey-image {
+        flex: none; /* Remove flex behavior for column layout */
+        width: 100%; /* Ensure the image takes full width */
         padding: 1rem;
     }
 }
@@ -1170,13 +1262,44 @@ body {
 }
 
 .contact-info ul li {
-    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
     font-size: 1.1rem;
+    text-align: center;
 }
 
-.contact-info ul li strong {
+.contact-info ul li i {
+    font-size: 1.5rem;
     color: #2E83B8;
-    font-weight: 600;
+    margin-right: 0.5rem;
+}
+
+.primary-line {
+    border: 0;
+    height: 2px;
+    background-color: #2E83B8;
+    margin: 2rem 0;
+}
+
+.testimonial {
+    margin-top: 1.5rem;
+    font-style: italic;
+    color: #777;
+}
+
+.testimonial blockquote {
+    margin: 0;
+    padding: 0.5rem;
+    border-left: 4px solid #2E83B8;
+    font-size: 1rem;
+}
+
+.testimonial p {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #555;
 }
 
 .contact-form {
@@ -1196,28 +1319,40 @@ body {
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-    padding: 0.75rem;
-    margin-bottom: 1rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 10px;
     font-size: 1rem;
     color: #333;
+    background-color: #fafafa;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #2E83B8;
+    box-shadow: 0 0 5px rgba(46, 131, 184, 0.5);
+    outline: none;
 }
 
 .contact-form button {
-    padding: 0.75rem 1.5rem;
+    padding: 1rem 2rem;
     background-color: #2E83B8;
     color: white;
     border: none;
     font-weight: bold;
     cursor: pointer;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(46, 131, 184, 0.3);
 }
 
 .contact-form button:hover {
     background-color: #1c5a83;
+    transform: translateY(-3px);
 }
 
 /* Responsive Design */
@@ -1234,9 +1369,50 @@ body {
     }
 
     .contact-info ul {
+        text-align: left;
+        padding-left: 0;
+    }
+
+    .contact-info ul li {
+        justify-content: center;
         text-align: center;
     }
+
+    .contact-info ul li i {
+        margin-right: 0.5rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 0.75rem;
+        margin-bottom: 1rem;
+    }
+
+    .contact-form button {
+        width: 100%;
+        padding: 1rem;
+    }
 }
+
+@media (max-width: 480px) {
+    .contact-info ul li {
+        font-size: 1rem;
+    }
+
+    .contact-info ul li i {
+        font-size: 1.25rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 0.6rem;
+    }
+
+    .contact-form button {
+        padding: 0.75rem;
+    }
+}
+
 /* Footer Section */
 .footer-section {
     background-color:  #111111;

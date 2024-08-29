@@ -7,20 +7,28 @@
     <link rel="stylesheet" href="styles.css">
     <!-- Using Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body>
     <!-- Hero Section -->
-    <header class="hero-section">
+    <header class="hero-section" id="home">
         <div class="hero-overlay"></div>
         <nav class="navbar">
             <img src="logo4.png" alt="Logo" class="logo">
             <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Team</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Partners</a></li>
-                <li><a href="#">Blog</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#survey">Survey</a></li>
+                <li><a href="#goals">Goals</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#partners">Partners</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="hamburger" onclick="toggleMenu()">
                 <i class="fas fa-bars"></i>
@@ -31,22 +39,21 @@
                 <h1>Welcome to Bird Flu Watch!</h1>
                 <div class="underline"></div>
                 <p>Your trusted source for the latest updates, expert advice, and essential tools to protect your farm. Stay informed and vigilant with real-time alerts and practical guidance on avian influenza.</p>
-                <!-- <a href="#" class="btn">View Projects</a> -->
             </div>
             <div class="hero-survey-form">
                 <h2>Survey Form</h2>
                 <p>Your voice matters in preventing the spread of bird flu. Take this quick survey to contribute to a healthier future. Every response helps protect our communities and wildlife. Thank you for making a difference!</p>
                 <form>
-                    <input type="text" placeholder="John Doe" required>
-                    <input type="email" placeholder="johndoe@mail.com" required>
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Enter your Email" required>
                     <input type="password" placeholder="Password" required>
                     <button type="submit">Go to Survey</button>
                 </form>
             </div>
-            
         </div>
     </header>
-    <section class="about-section">
+
+    <section class="about-section" id="about">
         <div class="about-container">
             <div class="about-text">
                 <h2>Why Bird Flu Watch?</h2>
@@ -62,7 +69,8 @@
             </div>
         </div>
     </section>
-    <section class="services-section">
+
+    <section class="services-section" id="services">
         <h3>What We Do</h3>
         <div class="services-container">
             <div class="service-box">
@@ -89,20 +97,20 @@
         </div>
     </section>
 
-    <section class="survey-section">
+    <section class="survey-section" id="survey">
         <div class="survey-container">
             <div class="survey-form">
                 <h2>SURVEY FORM</h2>
                 <p>Your voice matters in preventing the spread of bird flu. Take this quick survey to contribute to a healthier future. Every response helps protect our communities and wildlife. Thank you for making a difference!</p>
                 <form>
                     <label for="name">Name</label>
-                    <input type="text" id="name" placeholder="John Doe" required>
+                    <input type="text" id="name" placeholder="Your Name" required>
     
                     <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="johndoe@mail.com" required>
+                    <input type="email" id="email" placeholder="Enter your email" required>
     
                     <label for="password">Password</label>
-                    <input type="password" id="password" placeholder="●●●●●●●" required>
+                    <input type="password" id="password" placeholder="Password" required>
     
                     <button type="submit">GO TO SURVEY</button>
                 </form>
@@ -113,7 +121,7 @@
         </div>
     </section>
     
-    <section class="goals-section">
+    <section class="goals-section" id="goals">
         <h3>Goals</h3>
         <div class="goals-container">
             <div class="goal-box">
@@ -139,166 +147,106 @@
         </div>
     </section>
     
-<!-- <section class="protection-section">
-    <h3>STEPS TO PROTECT YOUR FLOCK</h3>
-    <div class="protection-container">
-        <div class="protection-box teal-box">
-            <h4>Housing</h4>
-            <ul>
-                <li>Ensure proper ventilation and space for your flock.</li>
-                <li>Keep housing clean and dry to prevent diseases.</li>
-                <li>Use secure enclosures to protect from predators.</li>
-                <li>Ensure compliance with local regulations.</li>
-            </ul>
+    <section class="team-section" id="team">
+        <h3>Team</h3>
+        <div class="team-container">
+            <div class="team-member">
+                <img src="1.png" alt="Maria de la Puerta">
+                <h4>Maria de la Puerta</h4>
+                <p>Animal Nutrition and Livestock Production</p>
+            </div>
+            <div class="team-member">
+                <img src="2.png" alt="John Doe">
+                <h4>John Doe</h4>
+                <p>Poultry Health Specialist</p>
+            </div>
+            <div class="team-member">
+                <img src="3.png" alt="Jane Smith">
+                <h4>Jane Smith</h4>
+                <p>Veterinary Pathologist</p>
+            </div>
+            <div class="team-member">
+                <img src="4.png" alt="Michael Johnson">
+                <h4>Michael Johnson</h4>
+                <p>Agricultural Economist</p>
+            </div>
         </div>
-        <div class="protection-box mustard-box">
-            <h4>Feeding</h4>
-            <ul>
-                <li>Provide a balanced diet rich in nutrients.</li>
-                <li>Ensure clean and fresh water is always available.</li>
-                <li>Store feed in a dry and secure place to avoid contamination.</li>
-                <li>Monitor feed consumption to detect any health issues early.</li>
-            </ul>
-        </div>
-        <div class="protection-box blue-box">
-            <h4>Health</h4>
-            <ul>
-                <li>Regularly check your flock for signs of illness.</li>
-                <li>Consult a veterinarian for vaccinations and treatments.</li>
-                <li>Isolate sick birds to prevent the spread of disease.</li>
-                <li>Maintain a clean and hygienic environment.</li>
-            </ul>
-        </div>
-        <div class="protection-box teal-box">
-            <h4>Biosecurity</h4>
-            <ul>
-                <li>Limit access to your farm to essential personnel only.</li>
-                <li>Disinfect equipment and footwear before entering housing areas.</li>
-                <li>Establish a clear protocol for visitors and deliveries.</li>
-                <li>Monitor and control pests that may carry diseases.</li>
-            </ul>
-        </div>
-    </div>
-    <div class="circle-decorations">
-        <div class="circle mustard-circle"></div>
-        <div class="circle grey-circle"></div>
-        <div class="circle teal-circle"></div>
-        <div class="circle blue-circle"></div>
-    </div>
-</section> -->
-<section class="team-section">
-    <h3>Team</h3>
-    <div class="team-container">
-        <!-- Initially visible team members -->
-        <div class="team-member">
-            <img src="1.png" alt="Maria de la Puerta">
-            <h4>Maria de la Puerta</h4>
-            <p>Animal Nutrition and Livestock Production</p>
-        </div>
-        <div class="team-member">
-            <img src="1.png" alt="Maria de la Puerta">
-            <h4>Maria de la Puerta</h4>
-            <p>Animal Nutrition and Livestock Production</p>
-        </div>
-        <div class="team-member">
-            <img src="1.png" alt="Maria de la Puerta">
-            <h4>Maria de la Puerta</h4>
-            <p>Animal Nutrition and Livestock Production</p>
-        </div>
-        <div class="team-member">
-            <img src="1.png" alt="Maria de la Puerta">
-            <h4>Maria de la Puerta</h4>
-            <p>Animal Nutrition and Livestock Production</p>
-        </div>
+    
+        <!-- Commenting out the View All Button for now -->
+        <!-- <button class="toggle-btn" onclick="toggleTeamMembers()">View All</button> -->
+    </section>
+    
 
-        <!-- Hidden team members -->
-        <div class="team-member hidden">
-            <img src="1.png" alt="Maria de la Puerta">
-            <h4>Maria de la Puerta</h4>
-            <p>Animal Nutrition and Livestock Production</p>
-        </div>
-        <div class="team-member hidden">
-            <img src="1.png" alt="Maria de la Puerta">
-            <h4>Maria de la Puerta</h4>
-            <p>Animal Nutrition and Livestock Production</p>
-        </div>
-        <div class="team-member hidden">
-            <img src="1.png" alt="Maria de la Puerta">
-            <h4>Maria de la Puerta</h4>
-            <p>Animal Nutrition and Livestock Production</p>
-        </div>
-        <div class="team-member hidden">
-            <img src="1.png" alt="Maria de la Puerta">
-            <h4>Maria de la Puerta</h4>
-            <p>Animal Nutrition and Livestock Production</p>
-        </div>
-    </div>
+        <!-- View All Button -->
+        <!-- <button class="toggle-btn" onclick="toggleTeamMembers()">View All</button> -->
+    </section>
 
-    <!-- View All Button -->
-    <button class="toggle-btn" onclick="toggleTeamMembers()">View All</button>
-</section>
+    <section class="partners-section" id="partners">
+        <div class="partners-container">
+            <div class="partners-row">
+                <img src="logos1.png" alt="Partners Image 1">
+            </div>
+        </div>
+    </section>
 
+    <section class="contact-section" id="contact">
+        <h3>Contact Us</h3>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h4>Get in Touch</h4>
+                <p>If you have any questions or would like more information, feel free to contact us. We're here to help!</p>
+                <ul>
+                    <li><strong>Email:</strong> birdfluwatch@omevaconsulting.com</li>
+                    <li><strong>Phone:</strong> +44 7950 764501</li>
+                </ul>
+                <hr class="primary-line">
+                <div class="testimonial">
+                    <blockquote>"The team at Bird Flu Watch has been instrumental in helping us navigate the challenges of avian influenza. Their expert advice and timely updates have saved us from potential outbreaks on multiple occasions."</blockquote>
+                    <p>- Dr. Emily Johnson, Veterinary Epidemiologist</p>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h4>Send Us a Message</h4>
+                <form>
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Message" rows="5" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    
 
-<section class="partners-section">
-    <!-- <h3>Partners</h3> -->
-    <div class="partners-container">
-        <div class="partners-row">
-            <img src="logos1.png" alt="Partners Image 1">
+    <footer class="footer-section">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="logo4.png" alt="Bird Flu Watch Logo" class="footer-logo-img">
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#survey">Survey</a></li>
+                    <li><a href="#goals">Goals</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#partners">Partners</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
         </div>
-        <!-- <div class="partners-row">
-            <img src="second.png" alt="Partners Image 2">
-        </div> -->
-    </div>
-</section>
-<section class="contact-section">
-    <h3>Contact Us</h3>
-    <div class="contact-container">
-        <div class="contact-info">
-            <h4>Get in Touch</h4>
-            <p>If you have any questions or would like more information, feel free to contact us. We're here to help!</p>
-            <ul>
-                <li><strong>Email:</strong> info@birdfluwatch.com</li>
-                <li><strong>Phone:</strong> +44 7950 764501</li>
-                <li><strong>Address:</strong> Nigeria</li>
-            </ul>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Bird Flu Watch. All rights reserved.</p>
         </div>
-        <div class="contact-form">
-            <h4>Send Us a Message</h4>
-            <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" rows="5" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-    </div>
-</section>
-<footer class="footer-section">
-    <div class="footer-container">
-        <div class="footer-logo">
-            <img src="logo4.png" alt="Bird Flu Watch Logo" class="footer-logo-img">
-        </div>
-        <div class="footer-links">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Partners</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </div>
-        <div class="footer-social">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2024 Bird Flu Watch. All rights reserved.</p>
-    </div>
-</footer>
-
+    </footer>
 
     <script>
         function toggleMenu() {
@@ -308,21 +256,17 @@
             hamburger.classList.toggle('fa-bars');
             hamburger.classList.toggle('fa-times');
         }
-    </script>
-    <script>
-    function toggleTeamMembers() {
-    const hiddenMembers = document.querySelectorAll('.team-member.hidden');
-    const toggleBtn = document.querySelector('.toggle-btn');
 
-    hiddenMembers.forEach(member => {
-        member.style.display = member.style.display === 'block' ? 'none' : 'block'; // Toggle visibility
-    });
+        function toggleTeamMembers() {
+            const hiddenMembers = document.querySelectorAll('.team-member.hidden');
+            const toggleBtn = document.querySelector('.toggle-btn');
 
-    // Change button text based on visibility
-    toggleBtn.textContent = toggleBtn.textContent === 'View All' ? 'Hide' : 'View All';
-}
+            hiddenMembers.forEach(member => {
+                member.style.display = member.style.display === 'block' ? 'none' : 'block'; // Toggle visibility
+            });
 
-
+            toggleBtn.textContent = toggleBtn.textContent === 'View All' ? 'Hide' : 'View All';
+        }
     </script>
 </body>
 </html>
